@@ -89,8 +89,9 @@ If we `console.log` the `completion` variable we get the following response. As 
 A token is not a character, a word, or a syllable. A token is a chunk of text with no specific length. On average, according to OpenAI, it is around 4 characters. You can use the [OpenAI tokenizer](https://platform.openai.com/tokenizer) below to play around with text and check how many tokens a chunk of text is. 
 If you remember back when we looked at the completion response, we saw that there are prompt tokens, completion tokens, and total tokens. It is important to note that the total amount of tokens is what your account will be charged with.
 
-Let's say you are worried about the number of tokens that it may take for the reply, you can set the maximum number of tokens per response. However, if set too low it may cut off the response halfway, which can produce an unsatisfying result. If you do use it make sure to set it to a safe length or you can add additional instructions in the system object in the messages array to limit the output. 
-Let's limit the response to 5 tokens.
+Let's say you are worried about the number of tokens that it may take for the reply, you can set the maximum number of tokens per response. However, if set too low it may cut off the response halfway, which can produce an unsatisfying result. If you do use it make sure to set it to a safe length or you can add additional instructions in the system object in the messages array to limit the output.
+
+Let's limit the response to 5 tokens by setting the  `max_tokens` to 5.
 
 ```
 async function main() {
@@ -110,7 +111,7 @@ main();
 
 ```
 
-We can see that the response is incomplete. If we look closer at the response, we can see that the `finish_reason` is "length", which indicates that the output was cut off due to reaching the specified length limit
+We can see that the response is incomplete. If we look closer, we can see that the `finish_reason` is "length", which indicates that the output was cut off due to reaching the specified length limit
 
 
 ![response-incomplete](./media/max_tokens.PNG)
@@ -200,7 +201,7 @@ async function main() {
 main();
 ```
 
-And this is the output we get in the terminal. As you can see, by using few-shot prompting we can steer the model towards the type of response we would like.
+As you can see, by using few-shot prompting we can steer the model towards the type of response we would like.
 
 ```
 Good afternoon, dear guest. I hope this delightful day brings you joy and relaxation during your stay at our esteemed hotel. Please feel free to approach me should you need any assistance.
@@ -212,4 +213,4 @@ The [Playground](https://platform.openai.com/playground?mode=chat) is a brillian
 
 ![playground](./media/playground.PNG)
 
-I hope this article served as an inspiration for your next project.
+I hope this article served as an inspiration for your next project. Feel free to experiment with the OpenAI API and explore its vast potential. Happy coding!
