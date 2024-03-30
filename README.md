@@ -1,5 +1,6 @@
 # Mastering the OpenAI API: A Comprehensive Beginner's Guide
 
+![openai](./media/openai.webp)
 Artificial Intelligence (AI) currently dominates discussions, with OpenAI’s ChatGPT emerging as one of the most sought-after Language Models (LLMs) in the field. The chatbot gained an incredible amount of attention very quickly due to its amazing capabilities. In this article, we are going to explore how to utilise the power of the OpenAI API.
 
 #### **Create a new project and install the necessary packages.**
